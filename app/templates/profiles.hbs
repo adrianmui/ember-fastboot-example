@@ -1,0 +1,15 @@
+{{outlet}}
+<div class="container">
+    {{#each model as |user|}}
+        <div class="card col-xs-4">
+            User: <h1> {{user.login}} <small> {{user.id}} </small> </h1>
+
+            <div class="row">
+                <img src={{user.avatar_url}}>
+            </div>
+
+            <strong> Bio: </strong> <h4> {{ user.bio }} </h4>
+        </div>
+    {{/each}}
+
+</div>

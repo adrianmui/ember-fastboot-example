@@ -1,5 +1,29 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div>
+<nav class="navbar navbar-toggleable-md navbar-light bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#" id="title">Omeda GitHub Profiles</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            {{#link-to 'index' class='nav-link'}}
+                <em>Index</em>
+            {{/link-to}}
+            {{#link-to 'directory' class='nav-link'}}
+                Directory
+            {{/link-to}}
+            {{#link-to 'profiles' class='nav-link'}}
+                Profiles
+            {{/link-to}}
+        </ul>
+    </div>
+</nav>
 
-{{outlet}}
+    <br>
+    <br>
+    <br>
+    
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
