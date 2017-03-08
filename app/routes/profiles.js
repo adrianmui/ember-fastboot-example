@@ -7,7 +7,7 @@ let usernames = [
     "adrianmui"
 ];
 
-let git_api_token_key = '7037293ffabc8eb6215f1f00691d27530c54078c';
+let git_api_token_key = 'c8fd8acfe03b8352d14201b0e21de5c586f36e0f';
 
 export default Ember.Route.extend({
     model() {
@@ -18,16 +18,15 @@ export default Ember.Route.extend({
         return RSVP.all(ajax_array).then( (responses) => {
           let promised = responses.map( (promises) => {
               return promises.json();
-          })
+          });
 
           return RSVP.all(promised).then( (result) => {
-              console.log(result)
+              console.log(result);
               return result;
-          })
+          });
         }).catch( (reason) => {
+            alert(reason);
             console.log(reason);
-            debugger;
-            
         });
     
     }
