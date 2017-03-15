@@ -1,12 +1,23 @@
 {{outlet}}
 
-<div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for user...">
+<div class="container">
+  <div class="col-lg-5">
+    <div class="row">
+      <div class="input-group">
+        {{input value="search" class="form-control" placeholder="Search for user..."}}
+      </div>
       <span class="input-group-btn">
         {{#link-to 'profiles' class="btn btn-primary"}} 
           Go!!
         {{/link-to}}
+        <button class="btn btn-success"> Add </button>
       </span>
     </div>
   </div>
+
+  <div class="col-lg-8">
+    {{#each user in model}}
+      {{ user.login}}
+    {{/each}}
+  </div>
+</div>
